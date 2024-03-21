@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
-
 // Controller 레이어 : 
 // - 클라이언트와 서버간의 접점
 // - 클라이언트의 요청을 받고 해당 요청에 대한 응답을 클라이언트게 돌려주는 영역
@@ -20,8 +18,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 // @RestController = @Controller + @ResponseBody
 @RestController
 // @RequestMapping() : HTTP 요청에 클래스와 메서드를 매핑하기 위한 어노테이션
-// @RequestMapping(value="/main", method={RequestMethod.GET})
 // HTTP GET localhost:4000/main/**
+// @RequestMapping(value="/main", method={RequestMethod.GET})
+
+// HTTP localhost:4000/main/**
 @RequestMapping("/main")
 public class BasicController {
     
