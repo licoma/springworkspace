@@ -31,7 +31,7 @@ public class App {
         System.out.println(new App().getGreeting());
 
         Person person = new Person("홍길동", 20);
-        person = new Person(name:"고길동");
+        person = new Person:("고길동");
 
         person= Person.builder().name("홍길동").age(20).build();
     }
