@@ -2,6 +2,7 @@ package com.changmin.basic.service.implement;
 
 import org.springframework.stereotype.Service;
 
+import com.changmin.basic.provider.JwtProvider;
 import com.changmin.basic.service.BasicService;
 
 // Service 레이어 :
@@ -15,6 +16,7 @@ import com.changmin.basic.service.BasicService;
 @Service
 public class BasicServiceImplement implements BasicService {
 
+    private JwtProvider jwtProvider = new JwtProvider ();
     @Override
     public String getHello() {
         return "Hello Springboot!!";
@@ -25,4 +27,10 @@ public class BasicServiceImplement implements BasicService {
         return "Get Mapping 으로 만든 메서드";
     }
     
+    @Override
+    public String getJwt(String priciple) {
+        return jwtProvider.create(priciple);
+    }
+
+
 }
